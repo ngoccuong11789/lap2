@@ -9,7 +9,7 @@
         <!--Repo Results View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="RepoResultsViewController" customModule="GithubDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="vXZ-lx-hvc" customClass="RepoResultsViewController" customModule="GithubDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -23,7 +23,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="repoCell" rowHeight="141" id="naM-xv-SLe" customClass="RepoCell" customModule="GithubDemo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="320" height="141"/>
+                                        <rect key="frame" x="0.0" y="28" width="320" height="141"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="naM-xv-SLe" id="WDz-EN-oOc">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="140"/>
@@ -53,8 +53,8 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="by" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENb-ak-oNh">
-                                                    <rect key="frame" x="43" y="31" width="19" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENb-ak-oNh">
+                                                    <rect key="frame" x="43" y="31" width="16" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -104,7 +104,9 @@
                                                 <constraint firstItem="i8v-yd-gmx" firstAttribute="top" secondItem="WDz-EN-oOc" secondAttribute="topMargin" constant="3" id="VZn-4R-gHY"/>
                                                 <constraint firstItem="4uC-PX-Bh5" firstAttribute="top" secondItem="vJb-yU-X1S" secondAttribute="bottom" constant="23" id="Xut-cX-6c7"/>
                                                 <constraint firstItem="GtL-zI-0Vv" firstAttribute="leading" secondItem="i8v-yd-gmx" secondAttribute="trailing" constant="8" id="a2n-dv-glm"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="hT0-c4-d3O" secondAttribute="bottom" constant="8" id="aMx-Ya-3VY"/>
                                                 <constraint firstAttribute="trailing" secondItem="Vau-VM-YnO" secondAttribute="trailing" constant="5" id="bIX-5I-l9g"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="4uC-PX-Bh5" secondAttribute="bottom" constant="8" id="eqg-zl-JeX"/>
                                                 <constraint firstItem="Vau-VM-YnO" firstAttribute="top" secondItem="WDz-EN-oOc" secondAttribute="top" constant="8" id="i9l-SI-2ix"/>
                                                 <constraint firstItem="vJb-yU-X1S" firstAttribute="leading" secondItem="WDz-EN-oOc" secondAttribute="leading" constant="20" id="ihb-TX-Mgo"/>
                                                 <constraint firstItem="q88-sG-4uh" firstAttribute="leading" secondItem="ENb-ak-oNh" secondAttribute="trailing" constant="35" id="uSZ-mc-fWf"/>

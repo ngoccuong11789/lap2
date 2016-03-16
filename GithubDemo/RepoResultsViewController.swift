@@ -75,8 +75,8 @@ class RepoResultsViewController: UIViewController, UITableViewDelegate, UITableV
         let cell = tableView.dequeueReusableCellWithIdentifier("repoCell", forIndexPath: indexPath) as! RepoCell
         
         cell.nameLable.text = repos[indexPath.row].name
-        cell.starCount.text = repos[indexPath.row].stars as? String
-        cell.forkCount.text = repos[indexPath.row].forks as? String
+        cell.starCount.text = String(repos[indexPath.row].stars!)
+        cell.forkCount.text = String (repos[indexPath.row].forks!)
         cell.descriptionLabel.text = repos[indexPath.row].repoDescription! + repos[indexPath.row].repoDescription!
         cell.ownerLabel.text = repos[indexPath.row].ownerHandle
         
