@@ -14,7 +14,7 @@ class RepoResultsViewController: UIViewController {
 
     var searchBar: UISearchBar!
     var searchSettings = GithubRepoSearchSettings()
-
+    
     var repos: [GithubRepo]!
 
     override func viewDidLoad() {
