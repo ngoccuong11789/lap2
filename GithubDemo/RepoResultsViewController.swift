@@ -10,13 +10,17 @@ import UIKit
 import MBProgressHUD
 
 // Main ViewController
-class RepoResultsViewController: UIViewController {
+class RepoResultsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var searchBar: UISearchBar!
     var searchSettings = GithubRepoSearchSettings()
     
-    var repos: [GithubRepo]!
+    var repos: [GithubRepo] = []
+    
+    
 
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,6 +34,11 @@ class RepoResultsViewController: UIViewController {
 
         // Perform the first search when the view controller first loads
         doSearch()
+        
+        
+        tableView.dataSource = self
+        tableView.estimatedRowHeight = 100
+        tableView.rowHeight = UITableViewAutomaticDimension
     }
 
     // Perform the search.
@@ -41,14 +50,28 @@ class RepoResultsViewController: UIViewController {
         GithubRepo.fetchRepos(searchSettings, successCallback: { (newRepos) -> Void in
 
             // Print the returned repositories to the output window
-            for repo in newRepos {
-                print(repo)
-            }   
+//            for repo in newRepos {
+//                print(repo)
+//            }
+            
+            self.repos = newRepos
+            self.tableView.reloadData()
 
             MBProgressHUD.hideHUDForView(self.view, animated: true)
             }, error: { (error) -> Void in
                 print(error)
         })
+    }
+    
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return repos.count
+    }
+    
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("repoCell", forIndexPath: indexPath)
+        return cell
     }
 }
 

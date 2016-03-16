@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "593FF1245F771F84F588FE44427E62F64F7982DC",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "593FF1245F771F84F588FE44427E62F64F7982DC" : 0,
+    "E49AA2037DFC2FDACCD60C044B3C227ED3B5DEE7" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "24AE2416-A63C-4155-8671-4E11FA78B5CC",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "593FF1245F771F84F588FE44427E62F64F7982DC" : "lap2\/",
+    "E49AA2037DFC2FDACCD60C044B3C227ED3B5DEE7" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "GithubDemo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "GithubDemo.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ngoccuong11789\/lap2.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "593FF1245F771F84F588FE44427E62F64F7982DC"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/hieuvo\/coderschool.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E49AA2037DFC2FDACCD60C044B3C227ED3B5DEE7"
+    }
+  ]
+}
