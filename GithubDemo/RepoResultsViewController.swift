@@ -8,6 +8,7 @@
 
 import UIKit
 import MBProgressHUD
+import AFNetworking
 
 // Main ViewController
 class RepoResultsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -35,6 +36,7 @@ class RepoResultsViewController: UIViewController, UITableViewDelegate, UITableV
         // Perform the first search when the view controller first loads
         doSearch()
         
+        tableView.delegate = self
         
         tableView.dataSource = self
         tableView.estimatedRowHeight = 100
@@ -70,7 +72,20 @@ class RepoResultsViewController: UIViewController, UITableViewDelegate, UITableV
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("repoCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("repoCell", forIndexPath: indexPath) as! RepoCell
+        
+        cell.nameLable.text = repos[indexPath.row].name
+        cell.starCount.text = repos[indexPath.row].stars as? String
+        cell.forkCount.text = repos[indexPath.row].forks as? String
+        cell.descriptionLabel.text = repos[indexPath.row].repoDescription! + repos[indexPath.row].repoDescription!
+        cell.ownerLabel.text = repos[indexPath.row].ownerHandle
+        
+        
+        if let profileImageURL = repos[indexPath.row].ownerAvatarURL {
+            
+            let imageURL = NSURL(string: profileImageURL)
+            cell.profileImage.setImageWithURL(imageURL!)
+        }
         return cell
     }
 }
